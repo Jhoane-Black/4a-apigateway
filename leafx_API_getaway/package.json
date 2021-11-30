@@ -1,0 +1,16 @@
+{
+    "name": "apigateway",
+    "version": "1.0.0",
+    "description": "Connection with leaf microservices",
+    "main": "src/index",
+    "scripts": {},
+    "author": "Grupo4-P52",
+    "license": "ISC",
+    "dependencies": {
+        "apollo-datasource-rest": "^3.1.1",
+        "apollo-server": "^3.1.2",
+        "graphql": "^15.5.1",
+        "lodash": "^4.17.21",
+        "node-fetch": "^2.6.1"
+    }
+}
