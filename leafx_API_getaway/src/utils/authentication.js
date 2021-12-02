@@ -6,7 +6,7 @@ const { ApolloError } = require('apollo-server');
 const authentication = async ({ req }) => {
     const token = req.headers.authorization || '';
     if(token == ''){
-        return { usernameToken: null}
+        return { userIdToken: null}
     }else{
         try{
             let requestOptions = {
@@ -22,7 +22,7 @@ const authentication = async ({ req }) => {
                 console.log(response)
                 throw new ApolloError("Token invalido", 401)
             }
-            return { usernameToken: (await response.json()).username};
+            return  { userIdToken: (await response.json()).id };
         }catch(error){
             console.log(error)
             throw new ApolloError("Error inesperado", 500)
