@@ -19,7 +19,14 @@ class ProductoAPI extends RESTDataSource{
     async createProducto(productoData){
         return await this.post(`/inventario/producto/`, productoData)
     }
- 
+
+    async updateProducto(id, productoData){
+        return await this.put(`/inventario/producto/${id}/`, productoData);
+    }
+
+    async deleteProducto(id){
+        return await this.delete(`/inventario/producto/${id}/`);
+    }
 }
 
 module.exports = ProductoAPI;

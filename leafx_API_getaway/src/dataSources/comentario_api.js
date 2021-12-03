@@ -23,6 +23,14 @@ class ComentarioAPI extends RESTDataSource{
     async createComentario(comentarioData){
         return await this.post(`/inventario/comentario/`, comentarioData)
     }
+
+    async updateComentario(id, comentarioData){
+        return await this.put(`/inventario/comentario/${id}/`, comentarioData);
+    }
+
+    async deleteComentario(id){
+        return await this.delete(`/inventario/comentario/${id}/`);
+    }
 }
 
 module.exports = ComentarioAPI;

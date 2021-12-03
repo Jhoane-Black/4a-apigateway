@@ -12,8 +12,20 @@ class ClienteAPI extends RESTDataSource{
         return await this.get(`/inventario/cliente/${id}/`);
     }
 
+    async clientesByUserRequest(id){
+        return await this.get(`/inventario/resumen/user/clientes/${id}/`);
+    }
+
     async createCliente(clienteData){
-        return await this.post(`/inventario/cliente/`, clienteData)
+        return await this.post(`/inventario/cliente/`, clienteData);
+    }
+
+    async updateCliente(id, clienteData){
+        return await this.put(`/inventario/cliente/${id}/`, clienteData);
+    }
+
+    async deleteCliente(id){
+        return await this.delete(`/inventario/cliente/${id}/`);
     }
 }
 
