@@ -40,6 +40,7 @@ const saleRegisterTypeDefs = gql`
         saleRegisterByProduct( producto: Int!): [SaleRegister]
         saleRegisterByProvider( proveedor: Int!): [SaleRegister]
         saleRegisterByClientAndProduct( cliente: Int!, producto: Int!): [SaleRegister]
+        saleRegisterById(id: String!, proveedor: Int!): SaleRegister
     }
     type Mutation{
         createSaleRegister(saleRegister: SaleRegisterInput!): SaleRegister

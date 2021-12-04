@@ -18,6 +18,9 @@ class SaleRegisterAPI extends RESTDataSource{
     async saleRegisterByProviderRequest(proveedor){
         return await this.get(`/saleregisterspv/${proveedor}`);
     }
+    async saleRegisterByIdRequest(registerID){
+        return await this.get(`/saleregisters/${registerID}`);
+    }
     async createSaleRegister(saleRegister){
         return await this.post('/saleregister/', saleRegister);
     }

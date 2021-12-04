@@ -40,6 +40,9 @@ const saleRegisterResolvers = {
             } else {
                 return null;
             }
+        },
+        saleRegisterById: async (_, {id}, {dataSources, userIdToken}) => {
+            return await dataSources.saleRegisterAPI.saleRegisterByIdRequest(id);// Para el delete, me toca pensar cómo cambiarlo
         }
     },
     Mutation: {
