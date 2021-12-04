@@ -24,15 +24,10 @@ const saleRegisterTypeDefs = gql`
         promocion: String
     }
     input SaleRegisterInput{
-        registroID: String
         cliente: Int!
-        proveedor: Int!
         producto: Int!
         cantidad: Int
-        precio: Int
-        total: Int
         fecha: String
-        promocion: String
     }
 
     type Query{
