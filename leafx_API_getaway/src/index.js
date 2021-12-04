@@ -7,6 +7,7 @@ const AuthAPI = require('./dataSources/auth_api')
 const ProveedorAPI = require('./dataSources/proveedor_api')
 const ProductoAPI = require('./dataSources/producto_api')
 const ComentarioAPI = require('./dataSources/comentario_api')
+const SaleRegisterAPI = require('./dataSources/saleregister_api')
 const authentication = require('./utils/authentication');
 
 
@@ -20,6 +21,7 @@ const server = new ApolloServer({
         proveedorAPI: new ProveedorAPI(),
         productoAPI: new ProductoAPI(),
         comentarioAPI: new ComentarioAPI(),
+        saleRegisterAPI: new SaleRegisterAPI()
     }),
     introspection: true,
     playground: true
